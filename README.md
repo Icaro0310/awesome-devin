@@ -54,7 +54,7 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 - [devin-metrics](https://github.com/Icaro0310/devin-metrics) — usage and quality metrics from session data.
 - [devin-bridge](https://github.com/Icaro0310/devin-bridge) — ACP client bridge for the Devin CLI (requires Node.js >= 20).
 - [devin-orchestrator](https://github.com/Icaro0310/devin-orchestrator) — multi-tool orchestration across the ecosystem.
-- [devin-office](https://github.com/Icaro0310/devin-office) — local dashboard for sessions and ecosystem status.
+- [devin-office](https://github.com/Icaro0310/devin-office) — live Devin activity as an animated SVG circuit board: sessions, subagents, tools.
 
 ## Contributing
 
