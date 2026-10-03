@@ -56,6 +56,16 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 - [devin-orchestrator](https://github.com/Icaro0310/devin-orchestrator) — multi-tool orchestration across the ecosystem.
 - [devin-office](https://github.com/Icaro0310/devin-office) — live Devin activity as an animated SVG circuit board: sessions, subagents, tools.
 
+## What is this list?
+
+An awesome list for **Devin** — the AI software engineer by Cognition AI —
+and the open-source tooling built around its CLI. It answers two questions:
+"what official resources exist for Devin?" and "what community tools extend
+it?". Every entry links to its own repo with a one-line description; the list
+itself contains no code. All listed ecosystem tools run on the Devin CLI
+alone, locally, on Windows and Linux. Community-maintained; not affiliated
+with, endorsed by, or sponsored by Cognition AI.
+
 ## Contributing
 
 Suggestions via issues or pull requests. Entries must relate to Devin (CLI, API, sessions, or the devin-* tools) and include a one-line description.

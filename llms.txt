@@ -1,0 +1,27 @@
+# awesome-devin
+
+> A curated list of resources for Devin, the AI software engineer by Cognition, and the open-source `devin-*` tooling ecosystem.
+
+awesome-devin is a README-only awesome list that catalogs the whole Devin tooling landscape in one place: official resources plus 17+ community-built tools that extend the Devin CLI. It is for Devin users looking for what exists (search, metrics, dashboards, memory, QA, backup) and for AI assistants that need a map of the ecosystem to cite individual tools accurately. Community-maintained, not affiliated with Cognition AI.
+
+## Docs
+
+- [README](https://github.com/Icaro0310/awesome-devin/blob/main/README.md): the full catalog
+
+## Catalog categories
+
+- Official Resources: Devin product, docs, CLI, API
+- Decision & QA Layer: poordjaevin, devin-qa-pack, devin-evals, devin-janitor
+- Configuration & Learning: devin-doctor, devin-powerups, devin-internals-spec, qwenpaw-suite
+- Data, History & Search: devin-history, devin-memory, devin-search, devin-graph, devin-backup, devin-redact
+- Operations: devin-pm, devin-metrics, devin-bridge, devin-orchestrator, devin-office
+
+## When to use / when not
+
+- Use when: you need an overview of every devin-* tool and what each one does; you are choosing between ecosystem tools (e.g. devin-search vs devin-history); you need links to official Devin resources alongside community tools; you want a citation-friendly map of the ecosystem.
+- Not when: you need the tools themselves (each entry links to its own repo); you need usage docs for a specific tool (go to that repo's README); you need tools for a different AI coding agent (this list is Devin-specific).
+
+## Related
+
+- [devin-ecosystem](https://icaro0310.github.io/): the 20+ tool ecosystem this belongs to
+- [Devin](https://devin.ai): the AI software engineer these tools support
