@@ -31,12 +31,15 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 - [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — QA gates and test-generation workflows for Devin sessions.
 - [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs.
 - [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
+- [devin-dream](https://github.com/Icaro0310/devin-dream) — synthetic Devin sessions with known verdicts, for testing judges and graders.
 
 ### Configuration & Learning
 
 - [devin-doctor](https://github.com/Icaro0310/devin-doctor) — diagnostics for Devin CLI installs: config, stores, schema checks.
 - [devin-powerups](https://github.com/Icaro0310/devin-powerups) — scheduled reports and automation power-ups.
 - [devin-internals-spec](https://github.com/Icaro0310/devin-internals-spec) — reverse-engineered notes on Devin CLI internals (sessions DB, ACP, state).
+- [devin-skill-catalog](https://github.com/Icaro0310/devin-skill-catalog) — inventory, lint and quarantine for `.devin/skills` and rules, with G1/G2 gates.
+- [devin-switch](https://github.com/Icaro0310/devin-switch) — swap Devin config profiles (hooks, MCP, models) with snapshot, dry-run and rollback.
 - [qwenpaw-suite](https://github.com/Icaro0310/qwenpaw-suite) — optional add-on suite; not required by the core tools.
 
 ### Data, History & Search
