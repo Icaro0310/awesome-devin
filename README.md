@@ -24,11 +24,11 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 ## Ecosystem Catalog
 
-Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Windows and Linux supported.
+Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Linux, Personal Windows and Corporate Windows are supported; Corporate Windows runs the registry-approved local-only subset.
 
 ### Distribution & Infrastructure
 
-- [devin-devkit](https://github.com/Icaro0310/devin-devkit) — distribution: choose QA, evaluation, security, memory, operations or full profiles; installs Python CLIs in isolated environments with uv.
+- [devin-devkit](https://github.com/Icaro0310/devin-devkit) — distribution: choose QA, evaluation, security, memory, operations or full profiles under Linux, Personal Windows or the explicit Corporate Windows local-only mode; installs Python CLIs in isolated environments with uv.
 - [devin-powerups](https://github.com/Icaro0310/devin-powerups) — maintainer hub: registry source of truth, project template, catalog exporters and scheduled reports.
 
 ### Related Artifacts
@@ -73,9 +73,10 @@ An awesome list for **Devin** — the AI software engineer by Cognition AI —
 and the open-source tooling built around its CLI. It answers two questions:
 "what official resources exist for Devin?" and "what community tools extend
 it?". Every entry links to its own repo with a one-line description; the list
-itself contains no code. All listed ecosystem tools run on the Devin CLI
-alone, locally, on Windows and Linux. Community-maintained; not affiliated
-with, endorsed by, or sponsored by Cognition AI.
+itself contains no code. Core ecosystem tools run on the Devin CLI alone,
+locally, across Linux, Personal Windows and the Corporate Windows local-only
+subset. Community-maintained; not affiliated with, endorsed by, or sponsored
+by Cognition AI.
 
 ## Contributing
 
