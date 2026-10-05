@@ -8,6 +8,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 - [Official Resources](#official-resources)
 - [Ecosystem: devin-* Tools](#ecosystem-devin--tools)
+- [Distribution](#distribution)
 - [Decision & QA Layer](#decision--qa-layer)
 - [Configuration & Learning](#configuration--learning)
 - [Data, History & Search](#data-history--search)
@@ -24,6 +25,10 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 ## Ecosystem: devin-* Tools
 
 Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Windows and Linux supported.
+
+### Distribution
+
+- [devin-devkit](https://github.com/Icaro0310/devin-devkit) — choose QA, evaluation, security, memory, operations or full profiles; installs Python CLIs in isolated environments with uv.
 
 ### Decision & QA Layer
 
