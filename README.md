@@ -2,7 +2,14 @@
 
 A curated list of resources for **Devin** — the AI software engineer by Cognition — and the `devin-*` open-source tooling ecosystem.
 
-> Community-maintained. Not affiliated with Cognition.
+> Unofficial community project. Not affiliated with, endorsed by, or sponsored by Cognition AI. "Devin" is a trademark of Cognition AI.
+
+## Start here
+
+1. [devin-doctor](https://github.com/Icaro0310/devin-doctor) — diagnose the local Devin install and stores.
+2. [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — flagship audit of agent claims against tool-call evidence.
+3. [devin-office](https://github.com/Icaro0310/devin-office) — watch live sessions as an animated circuit board.
+4. [devin-devkit](https://github.com/Icaro0310/devin-devkit) — install the registry-supported profiles for Linux, Personal Windows or Corporate Windows.
 
 ## Contents
 
@@ -38,7 +45,7 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 
 ### Decision & QA Layer
 
-- [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — QA gates and test-generation workflows for Devin sessions.
+- [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — flagship QA audit: PASS/PARTIAL/UNVERIFIED from tool-call evidence.
 - [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs.
 - [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
 - [devin-dream](https://github.com/Icaro0310/devin-dream) — synthetic Devin sessions with known verdicts, for testing judges and graders.
@@ -62,7 +69,7 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 ### Operations
 
 - [devin-pm](https://github.com/Icaro0310/devin-pm) — project-management workflows on top of Devin.
-- [devin-metrics](https://github.com/Icaro0310/devin-metrics) — usage and quality metrics from session data.
+- [devin-metrics](https://github.com/Icaro0310/devin-metrics) — local session observability: activity, context size and token peaks; no persisted cost fields.
 - [devin-bridge](https://github.com/Icaro0310/devin-bridge) — ACP client bridge for the Devin CLI (requires Node.js >= 20).
 - [devin-orchestrator](https://github.com/Icaro0310/devin-orchestrator) — multi-tool orchestration across the ecosystem.
 - [devin-office](https://github.com/Icaro0310/devin-office) — live Devin activity as an animated SVG circuit board: sessions, subagents, tools.
