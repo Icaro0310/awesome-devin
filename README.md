@@ -31,7 +31,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 ## Ecosystem Catalog
 
-Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Linux, Personal Windows and Corporate Windows are supported; Corporate Windows runs the registry-approved local-only subset.
+One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is the source of truth; [devin-devkit](https://github.com/Icaro0310/devin-devkit) is the distribution layer that installs it. Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Linux, Personal Windows and Corporate Windows are supported; Corporate Windows runs the registry-approved local-only subset.
 
 ### Distribution & Infrastructure
 
