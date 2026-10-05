@@ -7,8 +7,8 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 ## Contents
 
 - [Official Resources](#official-resources)
-- [Ecosystem: devin-* Tools](#ecosystem-devin--tools)
-- [Distribution](#distribution)
+- [Ecosystem Catalog](#ecosystem-catalog)
+- [Distribution & Infrastructure](#distribution--infrastructure)
 - [Decision & QA Layer](#decision--qa-layer)
 - [Configuration & Learning](#configuration--learning)
 - [Data, History & Search](#data-history--search)
@@ -22,17 +22,22 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [Devin CLI](https://docs.devin.ai/cli) — run Devin in your terminal.
 - [Devin API](https://docs.devin.ai/api) — sessions, enterprise features.
 
-## Ecosystem: devin-* Tools
+## Ecosystem Catalog
 
 Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external model server required. Windows and Linux supported.
 
-### Distribution
+### Distribution & Infrastructure
 
-- [devin-devkit](https://github.com/Icaro0310/devin-devkit) — choose QA, evaluation, security, memory, operations or full profiles; installs Python CLIs in isolated environments with uv.
+- [devin-devkit](https://github.com/Icaro0310/devin-devkit) — distribution: choose QA, evaluation, security, memory, operations or full profiles; installs Python CLIs in isolated environments with uv.
+- [devin-powerups](https://github.com/Icaro0310/devin-powerups) — maintainer hub: registry source of truth, project template, catalog exporters and scheduled reports.
+
+### Related Artifacts
+
+- [poordjaevin](https://github.com/Icaro0310/poordjaevin) — related tool: local-first calibrated decision layer ("System One") with typed questions, honest confidence, ACP backend on Devin's own model, and offline NLI fallback.
+- [qwenpaw-suite](https://github.com/Icaro0310/qwenpaw-suite) — related suite: optional self-hosted-model add-on; not required by the core tools.
 
 ### Decision & QA Layer
 
-- [poordjaevin](https://github.com/Icaro0310/poordjaevin) — local-first calibrated decision layer ("System One"): typed questions, honest confidence, ACP backend on Devin's own model, offline NLI fallback.
 - [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — QA gates and test-generation workflows for Devin sessions.
 - [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs.
 - [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
@@ -41,11 +46,9 @@ Reusable tooling that runs on the Devin CLI alone — no VM, tunnel, or external
 ### Configuration & Learning
 
 - [devin-doctor](https://github.com/Icaro0310/devin-doctor) — diagnostics for Devin CLI installs: config, stores, schema checks.
-- [devin-powerups](https://github.com/Icaro0310/devin-powerups) — scheduled reports and automation power-ups.
 - [devin-internals-spec](https://github.com/Icaro0310/devin-internals-spec) — reverse-engineered notes on Devin CLI internals (sessions DB, ACP, state).
 - [devin-skill-catalog](https://github.com/Icaro0310/devin-skill-catalog) — inventory, lint and quarantine for `.devin/skills` and rules, with G1/G2 gates.
 - [devin-switch](https://github.com/Icaro0310/devin-switch) — swap Devin config profiles (hooks, MCP, models) with snapshot, dry-run and rollback.
-- [qwenpaw-suite](https://github.com/Icaro0310/qwenpaw-suite) — optional add-on suite; not required by the core tools.
 
 ### Data, History & Search
 
