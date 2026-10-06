@@ -3,6 +3,7 @@
 <a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
 <a href="https://github.com/Icaro0310/awesome-devin/actions/workflows/links.yml"><img src="https://github.com/Icaro0310/awesome-devin/actions/workflows/links.yml/badge.svg" alt="links"/></a>
 <a href="https://scorecard.dev/viewer/?uri=github.com/Icaro0310/awesome-devin"><img src="https://api.scorecard.dev/projects/github.com/Icaro0310/awesome-devin/badge" alt="OpenSSF Scorecard"/></a>
+<a href="https://deepwiki.com/Icaro0310/awesome-devin"><img src="https://deepwiki.com/badge.svg" alt="DeepWiki"/></a>
 <a href="LICENSE"><img src="https://img.shields.io/badge/license-CC0_1.0-lightgrey" alt="License: CC0 1.0"/></a>
 <a href="https://github.com/Icaro0310/awesome-devin"><img src="https://img.shields.io/github/stars/Icaro0310/awesome-devin" alt="GitHub stars"/></a>
 <a href="https://github.com/Icaro0310/awesome-devin/commits/main"><img src="https://img.shields.io/github/last-commit/Icaro0310/awesome-devin" alt="Last commit"/></a>
@@ -35,10 +36,36 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 ## Official Resources
 
+**Product**
+
 - [Devin](https://devin.ai) — the AI software engineer.
 - [Devin Documentation](https://docs.devin.ai) — official product docs.
-- [Devin CLI](https://docs.devin.ai/cli) — run Devin in your terminal.
-- [Devin API](https://docs.devin.ai/api-reference/overview) — sessions, enterprise features.
+- [Devin CLI](https://docs.devin.ai/work-with-devin/devin-cli) — run Devin in your terminal, hand off to cloud sessions with `/handoff`.
+- [Ask Devin](https://docs.devin.ai/work-with-devin/ask-devin) — codebase Q&A, task planning, high-context sessions.
+- [Devin Review](https://docs.devin.ai/work-with-devin/devin-review) — review and understand complex PRs.
+
+**Programmatic surface**
+
+- [Devin API v3](https://docs.devin.ai/api-reference/overview) — sessions, knowledge, playbooks, secrets, automations and analytics, with service users and org/enterprise RBAC.
+- [Devin MCP](https://docs.devin.ai/work-with-devin/devin-mcp) — official MCP server: external agents can manage sessions, playbooks, knowledge, and repository docs.
+- [MCP servers & marketplace](https://docs.devin.ai/work-with-devin/mcp) — connect external tools to Devin via MCP (STDIO, SSE, HTTP).
+- [DeepWiki](https://deepwiki.com) + [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp) — auto-generated docs and architecture diagrams for public repos; free MCP server (`ask_question`, `read_wiki_structure`, `read_wiki_contents`).
+- [Python SDK](https://docs.devin.ai/federal/api/python-sdk) — analytics, groups, and ACU limits from Python.
+
+**Agentic configuration**
+
+- [Devin Skills](https://docs.devin.ai/product-guides/skills) — reusable `SKILL.md` procedures committed to repos, following the Agent Skills standard.
+- [Devin Plugins](https://docs.devin.ai/product-guides/plugins) — versioned bundles of skills, rules, MCP servers, hooks, and subagents, with org/enterprise governance.
+- [Playbooks](https://docs.devin.ai/product-guides/using-playbooks) — reusable org-shared prompts attached to sessions via macros.
+- [Devin Memory & Dreaming](https://docs.devin.ai/product-guides/memory) — cross-session preference and lesson notes, organized automatically.
+- [Integrations](https://docs.devin.ai/integrations/overview) — Slack, Teams, Linear, GitHub, PagerDuty, MCP.
+
+**Operations**
+
+- [Session Insights](https://docs.devin.ai/product-guides/session-insights) — analyze completed sessions, knowledge usage, and prompt coaching.
+- [Scheduled Sessions & Automations](https://docs.devin.ai/product-guides/scheduled-sessions) — recurring and trigger-based work.
+- [Security Profiles](https://docs.devin.ai/product-guides/security-profiles) — org-level restrictions on network, MCP, git, and `gh` access.
+- [Personal Analytics](https://docs.devin.ai/enterprise/security-access/personal-analytics) — the official ACU consumption view (what local stores cannot tell you about cost).
 
 ## Ecosystem Catalog
 
