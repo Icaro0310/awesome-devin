@@ -39,7 +39,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [Devin](https://devin.ai) — the AI software engineer.
 - [Devin Documentation](https://docs.devin.ai) — official product docs.
 - [Devin CLI](https://docs.devin.ai/cli) — run Devin in your terminal.
-- [Devin API](https://docs.devin.ai/api) — sessions, enterprise features.
+- [Devin API](https://docs.devin.ai/api-reference/overview) — sessions, enterprise features.
 
 ## Ecosystem Catalog
 
