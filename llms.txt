@@ -24,6 +24,7 @@ awesome-devin is a README-only awesome list that catalogs the whole Devin toolin
 - Data, History & Search: devin-history, devin-memory, devin-search, devin-graph, devin-backup, devin-redact
 - Operations: devin-pm, devin-metrics, devin-bridge, devin-orchestrator, devin-office
 - Related artifacts: poordjaevin, qwenpaw-suite
+- Community & Adjacent Lists: e2b-dev/awesome-devins, e2b-dev/awesome-ai-sdks, bradAGI/awesome-cli-coding-agents, ai-for-developers/awesome-ai-coding-tools, punkpeye/awesome-mcp-servers, atinfo/awesome-test-automation, kmaasrud/awesome-obsidian
 
 ## When to use / when not
 
