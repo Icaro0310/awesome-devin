@@ -1,3 +1,15 @@
+<div align="center">
+
+<a href="https://awesome.re"><img src="https://awesome.re/badge.svg" alt="Awesome"/></a>
+<a href="https://github.com/Icaro0310/awesome-devin/actions/workflows/links.yml"><img src="https://github.com/Icaro0310/awesome-devin/actions/workflows/links.yml/badge.svg" alt="links"/></a>
+<a href="https://scorecard.dev/viewer/?uri=github.com/Icaro0310/awesome-devin"><img src="https://api.scorecard.dev/projects/github.com/Icaro0310/awesome-devin/badge" alt="OpenSSF Scorecard"/></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-green" alt="License: MIT"/></a>
+<a href="https://github.com/Icaro0310/awesome-devin/stargazers"><img src="https://img.shields.io/github/stars/Icaro0310/awesome-devin" alt="GitHub stars"/></a>
+<a href="https://github.com/Icaro0310/awesome-devin/commits/main"><img src="https://img.shields.io/github/last-commit/Icaro0310/awesome-devin" alt="Last commit"/></a>
+<a href="https://github.com/Icaro0310/awesome-devin/issues"><img src="https://img.shields.io/badge/PRs-welcome-brightgreen" alt="PRs welcome"/></a>
+
+</div>
+
 # awesome-devin
 
 A curated list of resources for **Devin** — the AI software engineer by Cognition — and the `devin-*` open-source tooling ecosystem.
