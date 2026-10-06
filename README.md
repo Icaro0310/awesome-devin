@@ -14,7 +14,9 @@
 
 A curated list of resources for **Devin** — the AI software engineer by Cognition — and the `devin-*` open-source tooling ecosystem.
 
-> Unofficial community project. Not affiliated with, endorsed by, or sponsored by Cognition AI. "Devin" is a trademark of Cognition AI.
+> **This is not an official Cognition repository.** It is an unofficial community project, not affiliated with, endorsed by, or sponsored by Cognition AI. "Devin" is a trademark of Cognition AI. For official documentation and support, see [Official Resources](#official-resources).
+
+![The devin-* ecosystem landscape](assets/landscape.png)
 
 ## Start here
 
@@ -27,11 +29,8 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 - [Official Resources](#official-resources)
 - [Ecosystem Catalog](#ecosystem-catalog)
-- [Distribution & Infrastructure](#distribution--infrastructure)
-- [Decision & QA Layer](#decision--qa-layer)
-- [Configuration & Learning](#configuration--learning)
-- [Data, History & Search](#data-history--search)
-- [Operations](#operations)
+- [FAQ](#faq)
+- [Community & Adjacent Lists](#community--adjacent-lists)
 - [Contributing](#contributing)
 
 ## Official Resources
@@ -48,43 +47,213 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 ### Distribution & Infrastructure
 
 - [devin-devkit](https://github.com/Icaro0310/devin-devkit) — distribution: choose QA, evaluation, security, memory, operations or full profiles under Linux, Personal Windows or the explicit Corporate Windows local-only mode; installs Python CLIs in isolated environments with uv.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** distribution
+  - **Interfaces:** cli, installer
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-powerups](https://github.com/Icaro0310/devin-powerups) — maintainer hub: registry source of truth, project template, catalog exporters and scheduled reports.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** infrastructure
+  - **Interfaces:** cli, registry, docs
+  - **Platforms:** Windows, Linux
+  </details>
 
 ### Related Artifacts
 
 - [poordjaevin](https://github.com/Icaro0310/poordjaevin) — related tool: local-first calibrated decision layer ("System One") with typed questions, honest confidence, ACP backend on Devin's own model, and offline NLI fallback.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library, mcp, bridge
+  - **Platforms:** Windows, Linux
+  </details>
 - [qwenpaw-suite](https://github.com/Icaro0310/qwenpaw-suite) — related suite: optional self-hosted-model add-on; not required by the core tools.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** suite
+  - **Interfaces:** service, bridge, docs
+  - **Platforms:** Windows, Linux
+  </details>
 
 ### Decision & QA Layer
 
 - [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — flagship QA audit: PASS/PARTIAL/UNVERIFIED from tool-call evidence.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, automation
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-dream](https://github.com/Icaro0310/devin-dream) — synthetic Devin sessions with known verdicts, for testing judges and graders.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library
+  - **Platforms:** Windows, Linux
+  </details>
 
 ### Configuration & Learning
 
 - [devin-doctor](https://github.com/Icaro0310/devin-doctor) — diagnostics for Devin CLI installs: config, stores, schema checks.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-internals-spec](https://github.com/Icaro0310/devin-internals-spec) — reverse-engineered notes on Devin CLI internals (sessions DB, ACP, state).
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-skill-catalog](https://github.com/Icaro0310/devin-skill-catalog) — inventory, lint and quarantine for `.devin/skills` and rules, with G1/G2 gates.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, registry
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-switch](https://github.com/Icaro0310/devin-switch) — swap Devin config profiles (hooks, MCP, models) with snapshot, dry-run and rollback.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 
 ### Data, History & Search
 
 - [devin-history](https://github.com/Icaro0310/devin-history) — export and inspect Devin session history from the local sessions DB.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-memory](https://github.com/Icaro0310/devin-memory) — persistent memory layer for Devin sessions.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library, mcp, service
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-search](https://github.com/Icaro0310/devin-search) — full-text search across sessions and artifacts.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-graph](https://github.com/Icaro0310/devin-graph) — session and artifact relationships as a graph.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-backup](https://github.com/Icaro0310/devin-backup) — snapshot and restore Devin CLI data.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-redact](https://github.com/Icaro0310/devin-redact) — scrub secrets from exports before sharing.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library
+  - **Platforms:** Windows, Linux
+  </details>
 
 ### Operations
 
 - [devin-pm](https://github.com/Icaro0310/devin-pm) — project-management workflows on top of Devin.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, registry
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-metrics](https://github.com/Icaro0310/devin-metrics) — local session observability: activity, context size and token peaks; no persisted cost fields.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, dashboard
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-bridge](https://github.com/Icaro0310/devin-bridge) — ACP client bridge for the Devin CLI (requires Node.js >= 20).
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, bridge
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-orchestrator](https://github.com/Icaro0310/devin-orchestrator) — multi-tool orchestration across the ecosystem.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, automation
+  - **Platforms:** Windows, Linux
+  </details>
 - [devin-office](https://github.com/Icaro0310/devin-office) — live Devin activity as an animated SVG circuit board: sessions, subagents, tools.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** service, dashboard
+  - **Platforms:** Windows, Linux
+  </details>
+
+## FAQ
+
+**Is this affiliated with Cognition AI?**
+No. This is an unofficial community project. For official resources, see [Official Resources](#official-resources).
+
+**Do I need Devin installed?**
+Not to explore. `devin-dream` generates synthetic sessions with labeled defects, and the [Agent Assurance demo](https://github.com/Icaro0310/devin-qa-pack/tree/main/examples/agent-assurance) runs end-to-end with only `git` + `curl`. The production tools do read local Devin CLI data, so they are most useful on machines where Devin CLI actually runs.
+
+**Does it cost anything?**
+The tools are open source and local-first — no accounts, no telemetry, no API keys for the core catalog. `poordjaevin`'s optional ACP backend reuses the model your Devin CLI already runs.
+
+**Does it work on Windows?**
+Yes. Linux and Personal Windows run the full catalog. Corporate Windows is supported through the explicit `devin-devkit` local-only profile, which installs the registry-approved subset — no VM, tunnel, or external compute required.
+
+**Where do I start if I only try one thing?**
+`devin-doctor` to see what your install looks like, then the [Agent Assurance demo](https://github.com/Icaro0310/devin-qa-pack/tree/main/examples/agent-assurance) to watch claims-vs-evidence auditing run on generated sessions.
+
+**How do I suggest a resource?**
+Open a [suggestion issue](https://github.com/Icaro0310/awesome-devin/issues/new?template=suggest-resource.yml) or a pull request.
+
+## Community & Adjacent Lists
+
+Curated lists in the same neighborhood — different scope, worth browsing:
+
+- [e2b-dev/awesome-devins](https://github.com/e2b-dev/awesome-devins) — the landscape of "Devin-inspired" open and closed-source AI agents.
+- [e2b-dev/awesome-ai-sdks](https://github.com/e2b-dev/awesome-ai-sdks) — SDKs and frameworks for building AI agents.
+- [bradAGI/awesome-cli-coding-agents](https://github.com/bradAGI/awesome-cli-coding-agents) — terminal-native coding agents and the harnesses that orchestrate them.
+- [ai-for-developers/awesome-ai-coding-tools](https://github.com/ai-for-developers/awesome-ai-coding-tools) — AI-powered coding tools across editors, CLIs, and agents.
+- [punkpeye/awesome-mcp-servers](https://github.com/punkpeye/awesome-mcp-servers) — the canonical MCP server directory.
+- [atinfo/awesome-test-automation](https://github.com/atinfo/awesome-test-automation) — test automation frameworks and tools across languages.
+- [kmaasrud/awesome-obsidian](https://github.com/kmaasrud/awesome-obsidian) — Obsidian plugins, themes, and workflows.
 
 ## What is this list?
 
@@ -99,7 +268,7 @@ by Cognition AI.
 
 ## Contributing
 
-Suggestions via issues or pull requests. Entries must relate to Devin (CLI, API, sessions, or the devin-* tools) and include a one-line description.
+Suggestions via the [suggest-a-resource issue template](https://github.com/Icaro0310/awesome-devin/issues/new?template=suggest-resource.yml) or pull requests. Entries must relate to Devin (CLI, API, sessions, or the devin-* tools) and include a one-line description.
 
 ## License
 

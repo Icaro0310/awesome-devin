@@ -1,0 +1,44 @@
+name: Suggest a resource
+description: Suggest a tool, guide, list, or other resource for this list
+labels: ["suggestion"]
+body:
+  - type: input
+    id: name
+    attributes:
+      label: Name
+      description: Name of the resource as it should appear in the list
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL
+      description: Link to the repository, docs, or article
+    validations:
+      required: true
+  - type: input
+    id: description
+    attributes:
+      label: One-line description
+      description: A single factual sentence — what it does, no marketing
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Community tool
+        - Official resource
+        - Adjacent list
+        - Article or guide
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why does it belong here?
+      description: How does it relate to Devin (CLI, API, sessions) or the devin-* tooling ecosystem?
+    validations:
+      required: true
