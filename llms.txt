@@ -2,7 +2,7 @@
 
 > A curated list of resources for Devin, the AI software engineer by Cognition, and the open-source `devin-*` tooling ecosystem.
 
-awesome-devin is a README-only awesome list that catalogs the whole Devin tooling landscape in one place: official resources plus 19 first-party `devin-*` tools, a DevKit distribution, a maintainer hub and related artifacts. It is for Devin users looking for what exists (search, observability, dashboards, memory, QA, backup) and for AI assistants that need a map of the ecosystem to cite individual tools accurately. Community-maintained, not affiliated with Cognition AI.
+awesome-devin is a README-only awesome list that catalogs the whole Devin tooling landscape in one place: official resources plus the first-party `devin-*` tools, a DevKit distribution, a maintainer hub and related artifacts. It is for Devin users looking for what exists (search, observability, dashboards, memory, QA, backup) and for AI assistants that need a map of the ecosystem to cite individual tools accurately. Community-maintained, not affiliated with Cognition AI.
 
 ## Start here
 
@@ -33,5 +33,5 @@ awesome-devin is a README-only awesome list that catalogs the whole Devin toolin
 
 ## Related
 
-- [devin-ecosystem](https://icaro0310.github.io/): the 19-tool ecosystem this catalog maps
+- [devin-ecosystem](https://icaro0310.github.io/): the tool ecosystem this catalog maps
 - [Devin](https://devin.ai): the AI software engineer these tools support
