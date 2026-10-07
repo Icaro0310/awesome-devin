@@ -22,10 +22,13 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 ## Start here
 
-1. [devin-doctor](https://github.com/Icaro0310/devin-doctor) — diagnose the local Devin install and stores.
-2. [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — flagship audit of agent claims against tool-call evidence.
-3. [devin-office](https://github.com/Icaro0310/devin-office) — watch live sessions as an animated circuit board.
-4. [devin-devkit](https://github.com/Icaro0310/devin-devkit) — install the registry-supported profiles for Linux, Personal Windows or Corporate Windows.
+Mirrors the pinned repositories on the profile — the flagship first:
+
+1. [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — **flagship** audit of agent claims against tool-call evidence: PASS / PARTIAL / UNVERIFIED.
+2. [devin-evals](https://github.com/Icaro0310/devin-evals) — deterministic eval harness: replay recorded sessions against rubric graders.
+3. [devin-internals-spec](https://github.com/Icaro0310/devin-internals-spec) — documented internals of Devin's local stores with schema-version detection.
+4. [devin-bridge](https://github.com/Icaro0310/devin-bridge) — policy-gated ACP client: isolated sessions with allow/deny/ask rules.
+5. [poordjaevin](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with a Devin ACP backend.
 
 ## Contents
 
