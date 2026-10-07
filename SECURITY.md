@@ -1,18 +1,17 @@
 # Security Policy
 
-## What this tool does with your data
+## What this repository is
 
-- **No telemetry.** This project sends nothing anywhere.
-- **No network by default.** All processing is local unless a command
-  explicitly says otherwise (and it will say so in `--help`).
-- **Data stays on your machine.** Files it reads and writes are documented
-  in the README.
+This repository is a **curated list and documentation** — it contains no
+runtime code, no telemetry, and nothing that transmits data. The tools it
+links to are independent repositories, each with its own security policy.
 
 ## Sensitive data handling
 
-- Output intended for sharing must pass through
-  [`devin-redact`](https://github.com/Icaro0310/devin-redact) before publication.
-- Never commit Devin session databases, `.env` files, tokens, or pairing codes.
+- Never commit Devin session databases, `.env` files, tokens, or pairing
+  codes to this repository.
+- Linked tools have their own data policies; check each repo's
+  `SECURITY.md` before trusting a claim.
 
 ## Reporting a vulnerability
 
