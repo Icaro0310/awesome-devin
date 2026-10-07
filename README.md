@@ -25,7 +25,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 Mirrors the pinned repositories on the profile — the flagship first:
 
 1. [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack) — **flagship** audit of agent claims against tool-call evidence: PASS / PARTIAL / UNVERIFIED.
-2. [devin-evals](https://github.com/Icaro0310/devin-evals) — deterministic eval harness: replay recorded sessions against rubric graders.
+2. [devin-evals](https://github.com/Icaro0310/devin-evals) — deterministic eval harness: replay recorded sessions against rubric graders; `devin-evals dream` generates synthetic sessions with known verdicts (absorbed devin-dream).
 3. [devin-internals-spec](https://github.com/Icaro0310/devin-internals-spec) — documented internals of Devin's local stores with schema-version detection.
 4. [devin-bridge](https://github.com/Icaro0310/devin-bridge) — policy-gated ACP client: isolated sessions with allow/deny/ask rules.
 5. [poordjaevin](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with a Devin ACP backend.
@@ -118,7 +118,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli
   - **Platforms:** Windows, Linux
   </details>
-- [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs.
+- [devin-evals](https://github.com/Icaro0310/devin-evals) — evaluation harness for agent outputs; `dream` subgroup generates synthetic sessions with known verdicts (D01–D09).
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -130,13 +130,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
   - **Type:** tool
   - **Interfaces:** cli, automation
-  - **Platforms:** Windows, Linux
-  </details>
-- [devin-dream](https://github.com/Icaro0310/devin-dream) — synthetic Devin sessions with known verdicts, for testing judges and graders.
-  <details><summary>type · interfaces · platforms</summary>
-
-  - **Type:** tool
-  - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
 
@@ -260,7 +253,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 No. This is an unofficial community project. For official resources, see [Official Resources](#official-resources).
 
 **Do I need Devin installed?**
-Not to explore. `devin-dream` generates synthetic sessions with labeled defects, and the [Agent Assurance demo](https://github.com/Icaro0310/devin-qa-pack/tree/main/examples/agent-assurance) runs end-to-end with only `git` + `curl`. The production tools do read local Devin CLI data, so they are most useful on machines where Devin CLI actually runs.
+Not to explore. `devin-evals dream` generates synthetic sessions with labeled defects, and the [Agent Assurance demo](https://github.com/Icaro0310/devin-qa-pack/tree/main/examples/agent-assurance) runs end-to-end with only `git` + `curl`. The production tools do read local Devin CLI data, so they are most useful on machines where Devin CLI actually runs.
 
 **Does it cost anything?**
 The tools are open source and local-first — no accounts, no telemetry, no API keys for the core catalog. `poordjaevin`'s optional ACP backend reuses the model your Devin CLI already runs.
