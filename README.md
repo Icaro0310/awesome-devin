@@ -123,6 +123,20 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, installer
   - **Platforms:** Windows, Linux
   </details>
+- [homebrew-tap](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** distribution
+  - **Interfaces:** installer
+  - **Platforms:** Linux, macOS
+  </details>
+- [scoop-bucket](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** distribution
+  - **Interfaces:** installer
+  - **Platforms:** Windows
+  </details>
 - [devin-powerups](https://github.com/Icaro0310/devin-powerups) — maintainer hub: registry source of truth, project template, catalog exporters and scheduled reports.
   <details><summary>type · interfaces · platforms</summary>
 
