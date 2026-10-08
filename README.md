@@ -54,8 +54,6 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
-- [`homebrew-tap`](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
-- [`scoop-bucket`](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
 
 **Navigate** — find your way across the ecosystem
 
@@ -123,20 +121,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Type:** distribution
   - **Interfaces:** cli, installer
   - **Platforms:** Windows, Linux
-  </details>
-- [homebrew-tap](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
-  <details><summary>type · interfaces · platforms</summary>
-
-  - **Type:** distribution
-  - **Interfaces:** installer
-  - **Platforms:** Linux, macOS
-  </details>
-- [scoop-bucket](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
-  <details><summary>type · interfaces · platforms</summary>
-
-  - **Type:** distribution
-  - **Interfaces:** installer
-  - **Platforms:** Windows
   </details>
 - [devin-powerups](https://github.com/Icaro0310/devin-powerups) — maintainer hub: registry source of truth, project template, catalog exporters and scheduled reports.
   <details><summary>type · interfaces · platforms</summary>
@@ -377,8 +361,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
 - [`devin-redact`](https://github.com/Icaro0310/devin-redact) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
-- [`homebrew-tap`](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
-- [`scoop-bucket`](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
 
 **End users**
 
@@ -387,8 +369,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-doctor`](https://github.com/Icaro0310/devin-doctor) — Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions.
 - [`devin-history`](https://github.com/Icaro0310/devin-history) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
 - [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
-- [`homebrew-tap`](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
-- [`scoop-bucket`](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
 
 **Maintainers**
 
@@ -477,8 +457,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **Installer**
 
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
-- [`homebrew-tap`](https://github.com/Icaro0310/homebrew-tap) — Homebrew tap with formulas for the public devin-* CLIs; install on Linux or macOS via `brew install Icaro0310/tap/<tool>`. Content is written by release automation, consumed read-only.
-- [`scoop-bucket`](https://github.com/Icaro0310/scoop-bucket) — Scoop bucket with manifests for the public devin-* CLIs on Windows; install via `scoop install Icaro0310/<tool>`. Content is written by release automation, consumed read-only.
 
 **MCP server**
 
