@@ -15,7 +15,7 @@ Quick picks:
 
 - [devin-doctor](https://github.com/Icaro0310/devin-doctor): diagnose the local Devin install and stores.
 - [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack): flagship audit of agent claims against tool-call evidence.
-- [devin-office](https://github.com/Icaro0310/devin-office): watch live sessions as an animated circuit board.
+- [devin-office](https://github.com/Icaro0310/devin-office): watch sessions as an animated circuit board (live when a session source is available).
 - [devin-devkit](https://github.com/Icaro0310/devin-devkit): install registry-supported profiles for Linux, Personal Windows or Corporate Windows.
 
 ## Docs
