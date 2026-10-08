@@ -25,7 +25,7 @@ Quick picks:
 ## Catalog categories
 
 - Official Resources: Devin product, docs, CLI, API
-- Distribution & Infrastructure: devin-devkit, devin-powerups, homebrew-tap, scoop-bucket
+- Distribution & Infrastructure: devin-devkit, devin-powerups
 - Decision & QA Layer: devin-qa-pack, devin-evals, devin-janitor
 - Configuration & Learning: devin-doctor, devin-internals-spec, devin-skill-catalog, devin-switch
 - Data, History & Search: devin-history, devin-memory, devin-search, devin-graph, devin-backup, devin-redact
