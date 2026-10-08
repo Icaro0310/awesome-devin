@@ -4,7 +4,14 @@
 
 awesome-devin is a README-only awesome list that catalogs the whole Devin tooling landscape in one place: official resources plus the first-party `devin-*` tools, a DevKit distribution, a maintainer hub and related artifacts. It is for Devin users looking for what exists (search, observability, dashboards, memory, QA, backup) and for AI assistants that need a map of the ecosystem to cite individual tools accurately. Community-maintained, not affiliated with Cognition AI.
 
-## Start here
+## What do you want to do?
+
+- Understand → devin-doctor, devin-graph, devin-history, devin-internals-spec, devin-office, devin-search
+- Verify → devin-evals, devin-metrics, devin-qa-pack, poordjaevin
+- Control → devin-backup, devin-bridge, devin-janitor, devin-memory, devin-orchestrator, devin-redact, devin-switch
+- Build → devin-devkit, devin-powerups, devin-skill-catalog and related infrastructure
+
+Quick picks:
 
 - [devin-doctor](https://github.com/Icaro0310/devin-doctor): diagnose the local Devin install and stores.
 - [devin-qa-pack](https://github.com/Icaro0310/devin-qa-pack): flagship audit of agent claims against tool-call evidence.
