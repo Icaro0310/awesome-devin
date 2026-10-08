@@ -94,13 +94,6 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 ### Related Artifacts
 
-- [poordjaevin](https://github.com/Icaro0310/poordjaevin) — related tool: local-first calibrated decision layer ("System One") with typed questions, honest confidence, ACP backend on Devin's own model, and offline NLI fallback.
-  <details><summary>type · interfaces · platforms</summary>
-
-  - **Type:** tool
-  - **Interfaces:** cli, library, mcp, bridge
-  - **Platforms:** Windows, Linux
-  </details>
 - [qwenpaw-suite](https://github.com/Icaro0310/qwenpaw-suite) — related suite: optional self-hosted-model add-on; not required by the core tools.
   <details><summary>type · interfaces · platforms</summary>
 
@@ -130,6 +123,16 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
   - **Type:** tool
   - **Interfaces:** cli, automation
+  - **Platforms:** Windows, Linux
+  </details>
+
+### Governance
+
+- [poordjaevin](https://github.com/Icaro0310/poordjaevin) — Djævin: the governance layer of the ecosystem — a local-first calibrated decision layer ("System One") with typed questions and honest confidence. Automation gates route through it (session-janitor verdicts, learning-loop cleanup, answer-runner checks, devkit catalog decisions); the ACP backend reuses the model your Devin CLI already runs, and the local NLI backend is a fully-offline fallback.
+  <details><summary>type · interfaces · platforms</summary>
+
+  - **Type:** tool
+  - **Interfaces:** cli, library, mcp, bridge
   - **Platforms:** Windows, Linux
   </details>
 
