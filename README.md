@@ -491,7 +491,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 No. This is an unofficial community project. For official resources, see [Official Resources](#official-resources).
 
 **Do I need Devin installed?**
-Not to explore. `devin-evals dream` generates synthetic sessions with labeled defects, and the [Agent Assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/examples/agent-assurance) runs end-to-end with only `git` + `curl`. The production tools do read local Devin CLI data, so they are most useful on machines where Devin CLI actually runs.
+Not to explore. `devin-evals dream` generates synthetic sessions with labeled defects, and the [Agent Assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/packages/qa-pack/examples/agent-assurance) runs end-to-end with only `git` + `curl`. The production tools do read local Devin CLI data, so they are most useful on machines where Devin CLI actually runs.
 
 **Does it cost anything?**
 The tools are open source and local-first — no accounts, no telemetry, no API keys for the core catalog. `poordjaevin`'s optional ACP backend reuses the model your Devin CLI already runs.
@@ -500,7 +500,7 @@ The tools are open source and local-first — no accounts, no telemetry, no API 
 Yes. Linux and Personal Windows run the full catalog. Corporate Windows is supported through the explicit `devin-devkit` local-only profile, which installs the registry-approved subset — no VM, tunnel, or external compute required.
 
 **Where do I start if I only try one thing?**
-devin-explore to see what your install looks like, then the [Agent Assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/examples/agent-assurance) to watch claims-vs-evidence auditing run on generated sessions.
+devin-explore to see what your install looks like, then the [Agent Assurance demo](https://github.com/Icaro0310/devin-assure/tree/main/packages/qa-pack/examples/agent-assurance) to watch claims-vs-evidence auditing run on generated sessions.
 
 **How do I suggest a resource?**
 Open a [suggestion issue](https://github.com/Icaro0310/awesome-devin/issues/new?template=suggest-resource.yml) or a pull request.
