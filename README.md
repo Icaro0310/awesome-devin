@@ -52,9 +52,9 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 **Build** — create integrations and tooling
 
-- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
+- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
-- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 
 **Navigate** — find your way across the ecosystem
 
@@ -190,7 +190,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
-- [devin-skill-catalog](https://github.com/Icaro0310/devin-skill-catalog) — inventory, lint and quarantine for `.devin/skills` and rules, with G1/G2 gates.
+- [devin-skill-catalog](https://github.com/Icaro0310/devin-devkit/tree/main/packages/skill-catalog) — inventory, lint and quarantine for `.devin/skills` and rules, with G1/G2 gates.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -347,7 +347,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-control) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-search`](https://github.com/Icaro0310/devin-explore) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
-- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 - [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) — Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync.
 
 **Developers**
@@ -355,7 +355,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) — Curated awesome-list of Devin tooling and resources (CC0).
 - [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Verification monorepo: session-claim audit (devin-qa-pack), deterministic eval harness with dream corpus generator (devin-evals), and local session observability (devin-metrics).
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
-- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
+- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
@@ -365,7 +365,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **End users**
 
 - [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) — Curated awesome-list of Devin tooling and resources (CC0).
-- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
+- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 - [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Understand Devin sessions: diagnose the local installation (stores, schema, locks, config, disk — with fix suggestions), export and audit session history, run FTS5 full-text search, query a knowledge graph of sessions/projects/files/tools, and roll sessions into per-repo milestones and status reports. All local, no telemetry.
 - [`devin-history`](https://github.com/Icaro0310/devin-explore) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
 - [`devin-office`](https://github.com/Icaro0310/devin-control) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
@@ -375,7 +375,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-pm`](https://github.com/Icaro0310/devin-explore) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
-- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 - [`devin-switch`](https://github.com/Icaro0310/devin-control) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
 
 **Operations**
@@ -426,7 +426,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-control`](https://github.com/Icaro0310/devin-control) — Control how Devin runs: a policy-gated ACP bridge (Node.js, isolated sessions per repo with allow/deny/ask rules), a deterministic background-worker fan-out planner (devin-fanout), config profile switching with snapshot and rollback, and a live activity board (office, source-only).
-- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
+- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 - [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Understand Devin sessions: diagnose the local installation (stores, schema, locks, config, disk — with fix suggestions), export and audit session history, run FTS5 full-text search, query a knowledge graph of sessions/projects/files/tools, and roll sessions into per-repo milestones and status reports. All local, no telemetry.
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
@@ -439,7 +439,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-pm`](https://github.com/Icaro0310/devin-explore) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
 - [`devin-search`](https://github.com/Icaro0310/devin-explore) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
-- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 - [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 - [`devin-switch`](https://github.com/Icaro0310/devin-control) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
 
@@ -456,7 +456,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Installer**
 
-- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
+- [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 
 **MCP server**
 
@@ -476,7 +476,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 - [`devin-pm`](https://github.com/Icaro0310/devin-explore) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
-- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 
 **Service**
 
