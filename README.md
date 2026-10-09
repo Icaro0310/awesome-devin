@@ -37,7 +37,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Control** — constrain execution, data and lifecycle
 
@@ -166,7 +166,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 ### Governance
 
-- [poordjaevin](https://github.com/Icaro0310/poordjaevin) — Djævin: the governance layer of the ecosystem — a local-first calibrated decision layer ("System One") with typed questions and honest confidence. Automation gates route through it (session-janitor verdicts, learning-loop cleanup, answer-runner checks, devkit catalog decisions); the ACP backend reuses the model your Devin CLI already runs, and the local NLI backend is a fully-offline fallback.
+- [devin-judge](https://github.com/Icaro0310/devin-judge) — Djævin: the governance layer of the ecosystem — a local-first calibrated decision layer ("System One") with typed questions and honest confidence. Automation gates route through it (session-janitor verdicts, learning-loop cleanup, answer-runner checks, devkit catalog decisions); the ACP backend reuses the model your Devin CLI already runs, and the local NLI backend is a fully-offline fallback.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -326,7 +326,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 1. [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — Audit what a session actually delivered vs claimed
 2. [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Replay sessions against rubric graders to lock the behavior
-3. [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Get calibrated yes/no judgments when the verdict is fuzzy
+3. [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Get calibrated yes/no judgments when the verdict is fuzzy
 
 **Security engineers**
 
@@ -347,7 +347,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) — Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync.
 
 **Developers**
@@ -396,7 +396,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Security engineers**
 
@@ -417,7 +417,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **Bridge**
 
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) — Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync.
 
 **CLI**
@@ -441,7 +441,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
 - [`devin-switch`](https://github.com/Icaro0310/devin-switch) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Dashboard**
 
@@ -461,7 +461,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **MCP server**
 
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Python library**
 
@@ -470,7 +470,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-redact`](https://github.com/Icaro0310/devin-redact) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
-- [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Registry**
 
