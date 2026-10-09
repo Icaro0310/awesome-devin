@@ -156,7 +156,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
-- [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
+- [devin-janitor](https://github.com/Icaro0310/devin-state/tree/main/packages/janitor) — session cleanup with judge policies before deletion.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -235,7 +235,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
-- [devin-backup](https://github.com/Icaro0310/devin-backup) — snapshot and restore Devin CLI data.
+- [devin-backup](https://github.com/Icaro0310/devin-state/tree/main/packages/backup) — snapshot and restore Devin CLI data.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
