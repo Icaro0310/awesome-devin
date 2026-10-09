@@ -44,7 +44,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
 - [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-redact`](https://github.com/Icaro0310/devin-redact) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-switch`](https://github.com/Icaro0310/devin-switch) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
@@ -214,7 +214,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli
   - **Platforms:** Windows, Linux
   </details>
-- [devin-memory](https://github.com/Icaro0310/devin-memory) — persistent memory layer for Devin sessions.
+- [devin-brain](https://github.com/Icaro0310/devin-brain) — persistent memory layer for Devin sessions.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -295,7 +295,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 1. [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Drive ACP sessions programmatically with a permission policy
 2. [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Fan out workers deterministically inside the policy caps
-3. [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Persist memory with provenance and quarantine gates
+3. [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Persist memory with provenance and quarantine gates
 
 **Developers**
 
@@ -343,7 +343,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
@@ -356,7 +356,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
 - [`devin-qa-pack`](https://github.com/Icaro0310/devin-qa-pack) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
 - [`devin-redact`](https://github.com/Icaro0310/devin-redact) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
@@ -431,7 +431,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-history`](https://github.com/Icaro0310/devin-history) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-pm`](https://github.com/Icaro0310/devin-pm) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
@@ -460,7 +460,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **MCP server**
 
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Python library**
@@ -468,7 +468,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-redact`](https://github.com/Icaro0310/devin-redact) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`poordjaevin`](https://github.com/Icaro0310/poordjaevin) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
@@ -480,7 +480,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Service**
 
-- [`devin-memory`](https://github.com/Icaro0310/devin-memory) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) — Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync.
 <!-- DEVIN-INTERFACE:END -->
