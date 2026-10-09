@@ -35,16 +35,15 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 **Verify** — validate claims, actions and outcomes
 
 - [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Verification monorepo: session-claim audit (devin-qa-pack), deterministic eval harness with dream corpus generator (devin-evals), and local session observability (devin-metrics).
-- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
-- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream).
 - [`devin-metrics`](https://github.com/Icaro0310/devin-assure) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 
 **Control** — constrain execution, data and lifecycle
 
 - [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-control`](https://github.com/Icaro0310/devin-control) — Control how Devin runs: a policy-gated ACP bridge (Node.js, isolated sessions per repo with allow/deny/ask rules), a deterministic background-worker fan-out planner (devin-fanout), config profile switching with snapshot and rollback, and a live activity board (office, source-only).
 - [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-office`](https://github.com/Icaro0310/devin-control) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-control) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
@@ -52,6 +51,7 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 **Build** — create integrations and tooling
 
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-devkit) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
@@ -342,7 +342,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-control`](https://github.com/Icaro0310/devin-control) — Control how Devin runs: a policy-gated ACP bridge (Node.js, isolated sessions per repo with allow/deny/ask rules), a deterministic background-worker fan-out planner (devin-fanout), config profile switching with snapshot and rollback, and a live activity board (office, source-only).
-- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
+- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-control) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
@@ -394,7 +394,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **QA engineers**
 
 - [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Verification monorepo: session-claim audit (devin-qa-pack), deterministic eval harness with dream corpus generator (devin-evals), and local session observability (devin-metrics).
-- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
+- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream).
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-metrics`](https://github.com/Icaro0310/devin-assure) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 
@@ -427,7 +427,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-control`](https://github.com/Icaro0310/devin-control) — Control how Devin runs: a policy-gated ACP bridge (Node.js, isolated sessions per repo with allow/deny/ask rules), a deterministic background-worker fan-out planner (devin-fanout), config profile switching with snapshot and rollback, and a live activity board (office, source-only).
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Build on the ecosystem: profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows (isolated uv environments, npm bridge), plus lifecycle and quality gates for .devin skills/rules via devin-skill-catalog.
-- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
+- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream).
 - [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Understand Devin sessions: diagnose the local installation (stores, schema, locks, config, disk — with fix suggestions), export and audit session history, run FTS5 full-text search, query a knowledge graph of sessions/projects/files/tools, and roll sessions into per-repo milestones and status reports. All local, no telemetry.
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-history`](https://github.com/Icaro0310/devin-explore) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
@@ -466,7 +466,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **Python library**
 
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
-- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
+- [`devin-evals`](https://github.com/Icaro0310/devin-assure) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D10, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
