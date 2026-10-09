@@ -40,13 +40,13 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 
 **Control** — constrain execution, data and lifecycle
 
-- [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
 - [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
-- [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
 - [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
-- [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
+- [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 - [`devin-switch`](https://github.com/Icaro0310/devin-switch) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
 
 **Build** — create integrations and tooling
@@ -156,7 +156,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
-- [devin-janitor](https://github.com/Icaro0310/devin-janitor) — session cleanup with judge policies before deletion.
+- [devin-janitor](https://github.com/Icaro0310/devin-state/tree/main/packages/janitor) — session cleanup with judge policies before deletion.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -235,7 +235,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
   - **Interfaces:** cli, library
   - **Platforms:** Windows, Linux
   </details>
-- [devin-backup](https://github.com/Icaro0310/devin-backup) — snapshot and restore Devin CLI data.
+- [devin-backup](https://github.com/Icaro0310/devin-state/tree/main/packages/backup) — snapshot and restore Devin CLI data.
   <details><summary>type · interfaces · platforms</summary>
 
   - **Type:** tool
@@ -318,8 +318,8 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 **Operations**
 
 1. [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Check store health first — schema, locks, disk
-2. [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Snapshot before any destructive or cleanup operation
-3. [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Run lifecycle cleanup only with a verified fresh snapshot
+2. [`devin-backup`](https://github.com/Icaro0310/devin-state) — Snapshot before any destructive or cleanup operation
+3. [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Run lifecycle cleanup only with a verified fresh snapshot
 4. [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Watch activity and context growth over time
 
 **QA engineers**
@@ -330,9 +330,9 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Security engineers**
 
-1. [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Snapshot before redaction or deletion so work is reversible
+1. [`devin-backup`](https://github.com/Icaro0310/devin-state) — Snapshot before redaction or deletion so work is reversible
 2. [`devin-state`](https://github.com/Icaro0310/devin-state) — Redact secrets/PII in place before sharing or exporting
-3. [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Delete stale stores only after export+verify gates pass
+3. [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Delete stale stores only after export+verify gates pass
 <!-- DEVIN-PATHS:END -->
 
 <!-- DEVIN-AUDIENCE:BEGIN — generated by render_surfaces.py audience -->
@@ -340,27 +340,27 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **AI engineers**
 
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
-- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`qwenpaw-suite`](https://github.com/Icaro0310/qwenpaw-suite) — Optional QwenPaw add-on for self-hosted model operators. Includes the local-model bridge, health checks, and GitHub/local documentation sync.
 
 **Developers**
 
 - [`awesome-devin`](https://github.com/Icaro0310/awesome-devin) — Curated awesome-list of Devin tooling and resources (CC0).
+- [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
-- [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
-- [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
+- [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 
 **End users**
 
@@ -380,10 +380,10 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Operations**
 
-- [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
 - [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions.
 - [`devin-history`](https://github.com/Icaro0310/devin-history) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
-- [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
 - [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
@@ -393,17 +393,17 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **QA engineers**
 
-- [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
-- [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
+- [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 
 **Security engineers**
 
-- [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
-- [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
-- [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
+- [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 <!-- DEVIN-AUDIENCE:END -->
 
 <!-- DEVIN-INTERFACE:BEGIN — generated by render_surfaces.py interface -->
@@ -411,7 +411,7 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Automation**
 
-- [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 
 **Bridge**
@@ -422,26 +422,26 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **CLI**
 
-- [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
+- [`devin-backup`](https://github.com/Icaro0310/devin-state) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
 - [`devin-devkit`](https://github.com/Icaro0310/devin-devkit) — Profile-based installer for the public Devin tools across Linux, Personal Windows and Corporate Windows; reads the registry manifest and installs isolated CLIs with uv, plus the Node bridge with npm.
-- [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions.
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
+- [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Diagnose a Devin Desktop installation: stores, schema, locks, config, disk — with fix suggestions.
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-history`](https://github.com/Icaro0310/devin-history) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-janitor`](https://github.com/Icaro0310/devin-state) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
+- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 - [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-pm`](https://github.com/Icaro0310/devin-pm) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
 - [`devin-powerups`](https://github.com/Icaro0310/devin-powerups) — Public maintainer hub: registry, roadmap, project template, scaffolder, release checks, and community catalog generators.
-- [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
-- [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 - [`devin-skill-catalog`](https://github.com/Icaro0310/devin-skill-catalog) — Lifecycle + quality gates for .devin skills/rules: scan, lint, diff, G1/G2 gates, quarantined→approved→active lifecycle, sha256-verified export/import bundles (imports land quarantined).
+- [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 - [`devin-switch`](https://github.com/Icaro0310/devin-switch) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.
-- [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
 
 **Dashboard**
 
@@ -465,12 +465,12 @@ One registry ([devin-powerups](https://github.com/Icaro0310/devin-powerups)) is 
 
 **Python library**
 
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
-- [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-state`](https://github.com/Icaro0310/devin-state) — Devin state lifecycle monorepo: secret/PII redaction (devin-redact), store snapshot backup/restore (devin-backup) and session janitor (devin-janitor), sharing the devin-install-scheduler package.
 
 **Registry**
 
