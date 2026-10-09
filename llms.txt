@@ -7,7 +7,7 @@ awesome-devin is a README-only awesome list that catalogs the whole Devin toolin
 ## What do you want to do?
 
 - Understand → devin-doctor, devin-graph, devin-history, devin-internals-spec, devin-office, devin-search
-- Verify → devin-evals, devin-metrics, devin-qa-pack, poordjaevin
+- Verify → devin-evals, devin-metrics, devin-qa-pack, devin-judge
 - Control → devin-backup, devin-bridge, devin-janitor, devin-brain, devin-orchestrator, devin-redact, devin-switch
 - Build → devin-devkit, devin-powerups, devin-skill-catalog and related infrastructure
 
@@ -30,7 +30,7 @@ Quick picks:
 - Configuration & Learning: devin-doctor, devin-internals-spec, devin-skill-catalog, devin-switch
 - Data, History & Search: devin-history, devin-brain, devin-search, devin-graph, devin-backup, devin-redact
 - Operations: devin-pm, devin-metrics, devin-bridge, devin-orchestrator, devin-office
-- Related artifacts: poordjaevin, qwenpaw-suite
+- Related artifacts: devin-judge, qwenpaw-suite
 - Community & Adjacent Lists: e2b-dev/awesome-devins, e2b-dev/awesome-ai-sdks, bradAGI/awesome-cli-coding-agents, ai-for-developers/awesome-ai-coding-tools, punkpeye/awesome-mcp-servers, atinfo/awesome-test-automation, kmaasrud/awesome-obsidian
 
 ## When to use / when not
