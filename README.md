@@ -29,22 +29,22 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [`devin-graph`](https://github.com/Icaro0310/devin-graph) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-history`](https://github.com/Icaro0310/devin-history) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
 - [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
-- [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`devin-search`](https://github.com/Icaro0310/devin-search) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 
 **Verify** — validate claims, actions and outcomes
 
-- [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
-- [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 - [`devin-assure`](https://github.com/Icaro0310/devin-assure) — Flagship QA audit: verifies session deliverable claims against tool-call ground truth and reports PASS/PARTIAL/UNVERIFIED.
+- [`devin-evals`](https://github.com/Icaro0310/devin-evals) — Deterministic eval harness: replay recorded sessions against rubric graders; the `dream` subgroup generates synthetic sessions with known verdicts (D01-D09, absorbs devin-dream).
 - [`devin-judge`](https://github.com/Icaro0310/devin-judge) — Djævin: calibrated local-first decision layer with typed questions and honest confidence. The Devin ACP backend reuses the model your Devin CLI already runs (no extra download, no API key); the local NLI backend stays as a fully-offline fallback.
+- [`devin-metrics`](https://github.com/Icaro0310/devin-metrics) — Local-only session observability: activity, context size, and token peaks per project/model/day; zero telemetry. Devin does not persist cost fields, so cost is not claimed. Includes an optional dashboard subpackage and command.
 
 **Control** — constrain execution, data and lifecycle
 
 - [`devin-backup`](https://github.com/Icaro0310/devin-backup) — Safe snapshot/verify/restore/rotate of Devin stores with schema-version manifests.
+- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
 - [`devin-bridge`](https://github.com/Icaro0310/devin-bridge) — Policy-gated ACP client (Node.js, CI matrix Node 22 + 24): isolated sessions per repo with allow/deny/ask permission policy.
 - [`devin-janitor`](https://github.com/Icaro0310/devin-janitor) — Session lifecycle janitor: export-then-delete pipeline, tiered classification, pluggable judge, pending-retry for locked stores.
-- [`devin-brain`](https://github.com/Icaro0310/devin-brain) — Anti-poisoning memory store: provenance, versioning, quarantine gate, and session-learning utilities.
+- [`devin-office`](https://github.com/Icaro0310/devin-office) — Local-first Devin session and subagent dashboard with standalone and optional split modes.
 - [`devin-orchestrator`](https://github.com/Icaro0310/devin-orchestrator) — Background-worker fan-out policy: deterministic planner enforcing worker caps (max 3), no nesting, read-only profiles for review, collect-before-report. Skill + always-on rule.
 - [`devin-state`](https://github.com/Icaro0310/devin-state) — Secret/PII redaction that understands Devin tool-call semantics, in-place in SQLite, with a verification gate.
 - [`devin-switch`](https://github.com/Icaro0310/devin-switch) — Switch between Devin configuration profiles (hooks, MCP, models) with snapshot, sha256 verify, atomic write, journal and rollback. Dry-run by default; secrets never printed.

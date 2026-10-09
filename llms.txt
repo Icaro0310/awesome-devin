@@ -6,9 +6,9 @@ awesome-devin is a README-only awesome list that catalogs the whole Devin toolin
 
 ## What do you want to do?
 
-- Understand → devin-explore, devin-graph, devin-history, devin-internals-spec, devin-office, devin-search
+- Understand → devin-explore, devin-graph, devin-history, devin-internals-spec, devin-search
 - Verify → devin-evals, devin-metrics, devin-assure, devin-judge
-- Control → devin-backup, devin-bridge, devin-janitor, devin-brain, devin-orchestrator, devin-state, devin-switch
+- Control → devin-backup, devin-brain, devin-bridge, devin-janitor, devin-office, devin-orchestrator, devin-state, devin-switch
 - Build → devin-devkit, devin-powerups, devin-skill-catalog and related infrastructure
 
 Quick picks:
