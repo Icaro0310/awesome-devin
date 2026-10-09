@@ -39,7 +39,7 @@ jobs:
           set -e
           existing=$(gh pr list --repo "$GITHUB_REPOSITORY" \
             --head "$HEAD_BRANCH" --base "$BASE_BRANCH" --state open \
-            --json url --jq '.[0].url')
+            --json url --jq '.[0].url // empty')
           if [ -n "$existing" ]; then
             echo "PR already exists: $existing"
           else
