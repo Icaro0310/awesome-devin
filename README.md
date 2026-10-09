@@ -28,7 +28,6 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 - [`devin-explore`](https://github.com/Icaro0310/devin-explore) — Understand Devin sessions: diagnose the local installation (stores, schema, locks, config, disk — with fix suggestions), export and audit session history, run FTS5 full-text search, query a knowledge graph of sessions/projects/files/tools, and roll sessions into per-repo milestones and status reports. All local, no telemetry.
 - [`devin-graph`](https://github.com/Icaro0310/devin-explore) — Knowledge graph: sessions, projects, files touched, tools used — queryable edges.
 - [`devin-history`](https://github.com/Icaro0310/devin-explore) — Export and audit Devin session history — markdown notes, JSON, CSV, Obsidian-ready.
-- [`devin-internals-spec`](https://github.com/Icaro0310/devin-internals-spec) — Documented internals of Devin Desktop/CLI stores + schema-version detection + fixtures + devin-inspect CLI.
 - [`devin-pm`](https://github.com/Icaro0310/devin-explore) — Project manager over sessions: per-repo rollups, milestones, status reports, registry.json.
 - [`devin-search`](https://github.com/Icaro0310/devin-explore) — FTS5 full-text search across all Devin sessions, role-tagged and project-filtered.
 
