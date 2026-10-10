@@ -88,10 +88,14 @@ A curated list of resources for **Devin** — the AI software engineer by Cognit
 **Programmatic surface**
 
 - [Devin API v3](https://docs.devin.ai/api-reference/overview) — sessions, knowledge, playbooks, secrets, automations and analytics, with service users and org/enterprise RBAC.
+- [Devin TypeScript SDK](https://www.npmjs.com/package/@cognition-ai/sdk) — official `@cognition-ai/sdk` (beta): create and steer cloud or local Devin sessions from Node/TypeScript; install via the `beta` dist-tag.
+- [Python SDK](https://docs.devin.ai/federal/api/python-sdk) — analytics, groups, and ACU limits from Python (federal deployments only).
 - [Devin MCP](https://docs.devin.ai/work-with-devin/devin-mcp) — official MCP server: external agents can manage sessions, playbooks, knowledge, and repository docs.
 - [MCP servers & marketplace](https://docs.devin.ai/work-with-devin/mcp) — connect external tools to Devin via MCP (STDIO, SSE, HTTP).
 - [DeepWiki](https://deepwiki.com) + [DeepWiki MCP](https://docs.devin.ai/work-with-devin/deepwiki-mcp) — auto-generated docs and architecture diagrams for public repos; free MCP server (`ask_question`, `read_wiki_structure`, `read_wiki_contents`).
-- [Python SDK](https://docs.devin.ai/federal/api/python-sdk) — analytics, groups, and ACU limits from Python.
+- [CLI session export](https://docs.devin.ai/cli/reference/commands) — `devin --export` writes the conversation after each turn in ATIF format.
+- [OpenTelemetry export](https://docs.devin.ai/cli/changelog/stable) — ship agent events and metrics to an OTEL collector via the `otel` config block or `OTEL_EXPORTER_OTLP_*` variables.
+- [Devin VS Code extension](https://github.com/CognitionAI/devin-extension) — launch and manage Devin sessions from VS Code (official marketplace listing).
 
 **Agentic configuration**
 
