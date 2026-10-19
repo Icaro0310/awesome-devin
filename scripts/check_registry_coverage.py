@@ -42,13 +42,24 @@ def registry_names(registry: dict) -> list[str]:
         if r.get("name") and r.get("visibility") == "public")
 
 
+def _covered_names(readme: str) -> set[str]:
+    """Link labels and backticked names — the ways a catalog actually
+    lists a product. Bare URLs, HTML comments and plain prose do not
+    count: a TODO note mentioning a name is not coverage."""
+    text = re.sub(r"<!--.*?-->", "", readme, flags=re.DOTALL)
+    labels = {
+        m.group(2)
+        for m in re.finditer(r"\[(`?)([\w.-]+)\1\]\(", text)
+    }
+    ticks = set(re.findall(r"`([\w][\w.-]*)`", text))
+    return labels | ticks
+
+
 def uncovered(readme: str, names: list[str]) -> list[str]:
-    """Names with no backticked or linked mention in the README."""
-    out = []
-    for name in names:
-        if not re.search(rf"(?<![\w-]){re.escape(name)}(?![\w-])", readme):
-            out.append(name)
-    return out
+    """Registry names absent from the README's link labels and
+    backticked mentions."""
+    covered = _covered_names(readme)
+    return [n for n in names if n not in covered]
 
 
 def main() -> int:
